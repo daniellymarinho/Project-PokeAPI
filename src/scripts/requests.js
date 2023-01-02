@@ -1,6 +1,6 @@
 async function consumindoPokeAPI() {
     const loading = document.querySelector("#loading")
-    const pokemonsAPI = await fetch("https://pokeapi.co/api/v2/pokemon")
+    const pokemonsAPI = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
         .then(Response => Response.json())
         .then(Response => {
             render(Response.results)
